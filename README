@@ -1,0 +1,20 @@
+Installation
+============
+
+1. Add the contents of the download to /third_party/structure_navigation_title/
+2. Enable the Fieldtype and Extension.
+3. For every Channel you want a custom navigation title for, add the Structure Navigation Title fieldtype to the Channel.
+
+A global variable will be created called {structure_navigation_title}, which contains a pipe delimitated list of "channel_name:custom_field" for each Structure managed channel set to "Page" that contains the fieldtype. 
+
+Usage
+=====
+
+{exp:structure:nav mode="full" channel:title="{structure_navigation_title}"}
+
+Why
+===
+
+The purpose of this to reduce template maintenance when a new channel is added, and to keep your parameter values short. If you have 10 Structure managed channels, your nav template tag would contain 10 "channel_name:custom_field pairs"
+
+
