@@ -110,7 +110,7 @@ class Structure_navigation_title_ext {
                 $data[] = $field['channel_name'] .':'. $field['field_name'];
             }
             
-            $this->EE->config->_global_vars['structure_page_titles'] = implode('|', $data);
+            $this->EE->config->_global_vars['structure_navigation_title'] = implode('|', $data);
         }
     }
     
