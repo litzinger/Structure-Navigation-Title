@@ -96,7 +96,7 @@ class Structure_navigation_title_ext {
     /**
      * Create our structure_page_titles global var
      */
-    function sessions_end()
+    function sessions_end($session)
     {
         // Only do this if there is page data, and we're not within the control panel
         if(REQ == 'PAGE')
@@ -112,6 +112,8 @@ class Structure_navigation_title_ext {
             
             $this->EE->config->_global_vars['structure_navigation_title'] = implode('|', $data);
         }
+        
+        return $session;
     }
     
     private function _get_fields()
